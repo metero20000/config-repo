@@ -5,7 +5,10 @@ server:
   port: 8200
 
 management:
+  server:
+    port: 8205  #管理功能时，不能与上面相同，否则不可用。？
   endpoints:
     web:
+      #base-path: /actuator  默认路径
       exposure:
         include: '*'
